@@ -9,5 +9,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends nano libvips42 
   && docker-php-ext-configure shmop --enable-shmop \
   && docker-php-ext-install shmop \
   && docker-php-ext-enable apcu redis zip igbinary
-ADD standard-php.ini /usr/local/etc/php/php.ini
+ADD https://raw.githubusercontent.com/notglossy/docker-wordpress/main/php-ini.ini/standard-php.ini /usr/local/etc/php/php.ini
 ADD https://raw.githubusercontent.com/roots/wp-password-bcrypt/master/wp-password-bcrypt.php /usr/src/wordpress/wp-content/mu-plugins/
