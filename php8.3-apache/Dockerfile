@@ -1,4 +1,4 @@
-FROM wordpress:php8.2-apache
+FROM wordpress:php8.3-apache
 RUN apt-get update && apt-get install -y --no-install-recommends nano libvips42 libzip-dev libffi-dev \
   && pecl install apcu-5.1.22 \
   && pecl install redis-5.3.7 \
